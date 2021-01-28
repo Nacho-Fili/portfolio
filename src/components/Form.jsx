@@ -24,7 +24,8 @@ const style = {
         width: '40vw',
         backgroundColor: 'rgba(255,255,255,0.3)',
         outline: 'none',
-        color: colors.light
+        color: colors.light,
+        resize: 'none'
     }
 }
 
