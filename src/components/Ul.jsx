@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import colors from '../colors/colors'
+
 
 const style = {
     listStyleType: 'none',
