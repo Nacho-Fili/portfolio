@@ -31,9 +31,9 @@ function App() {
         <H1>Ignacio FILIPOVSKIS</H1>
         <P>Estudiante de Ingeniería Informática</P>
       </Header>
-      <Section>
-        <H2>Portafolio</H2>
-        <Div width='100vh' height= 'auto' display={Flex} alignItems='center' justifyContent='center'>
+      <Section> 
+        <Div width='100vh' height= 'auto' display={Flex} flexDirection='column' alignItems='center' justifyContent='center'>
+          <H2>Portafolio</H2>
           <Div width='60vw' height='auto' display={Block}>
             <Img src={image1} alt='Image 1'/>
             <Img src={image1} alt='Image 1'/>
@@ -51,6 +51,7 @@ function App() {
             <Li>C y estructuras de datos</Li>
             <Li> Git y Github </Li>
             <Li>POO</Li>  
+            <Li>Diagramas de clases y secuencia en UML</Li>
           </Ul>
         </Div>
 
