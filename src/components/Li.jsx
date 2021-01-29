@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import colors from '../colors/colors'
 
+
 const style = {
     color: colors.light,
-    fontSize: '1.3rem'
+    fontSize: '130%',
+    margin: '0 0 15px 0'
 }
 
 export default class Li extends Component{

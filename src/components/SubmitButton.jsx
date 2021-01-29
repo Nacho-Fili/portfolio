@@ -5,6 +5,7 @@ const style = {
     borderRadius: '10px',
     border: 'none',
     margin: '1vh 0',
+    minWidth: '50px',
     height: '5vh',
     width: '10vh',
     color: colors.light,
