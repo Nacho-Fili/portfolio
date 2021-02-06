@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import colors from '../colors/colors'
 
 
@@ -12,12 +12,12 @@ const style = (_justifyContent, _flexDirection) => ({
 
 })
 
-export default class Footer extends Component{
-    render(){
+export default class Footer extends Component {
+    render() {
 
         const {justifyContent, flexDirection, children} = this.props
 
-        return(
+        return (
             <footer style={style(justifyContent, flexDirection)}>
                 {children}
             </footer>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import './Ul.css'
 
 const style = {
@@ -8,12 +8,12 @@ const style = {
     flexDirection: 'column',
 }
 
-export default class Ul extends Component{
-    
-    render(){
+export default class Ul extends Component {
+
+    render() {
         const {children} = this.props
 
-        return(
+        return (
             <ul style={style}> {children} </ul>
         )
     }

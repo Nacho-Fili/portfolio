@@ -1,8 +1,8 @@
-export default class Grid{
-    static createStyleObject(props){
+export default class Grid {
+    static createStyleObject(props) {
         const {gridTemplateColumns, gridTemplateRows} = props
-        
-        return({
+
+        return ({
             display: 'grid',
             gridTemplateColumns: gridTemplateColumns,
             gridTemplateRows: gridTemplateRows

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 const style = {
     objectFit: 'fill',
@@ -7,16 +7,17 @@ const style = {
     width: '100%',
     display: 'block',
     padding: '10px',
+    alignSelf: 'center'
 }
 
-export default class Img extends Component{
+export default class Img extends Component {
 
-    render(){
+    render() {
 
         const {src, alt} = this.props
 
-        return(
-            <img src={src} alt={alt} style={style}/>    
+        return (
+            <img src={src} alt={alt} style={style}/>
         )
     }
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import colors from '../colors/colors'
 import SubmitButton from './SubmitButton'
 import Input from './Input'
@@ -29,16 +29,17 @@ const style = {
     }
 }
 
-export default class Form extends Component{
+export default class Form extends Component {
 
-    render(){
-        
-        return(
+    render() {
+
+        return (
             <form style={style.form} action="">
-                <Input type='text' className='section__form--input'placeholder='Nombre...'/>
+                <Input type='text' className='section__form--input' placeholder='Nombre...'/>
                 <Input type='email' className='section__form--input' placeholder='E-Mail...'/>
-                <textarea style={style.mainInput} type="text" placeholder='Mensaje...' className="section__form--main-input"/>
-                <SubmitButton />
+                <textarea style={style.mainInput} type="text" placeholder='Mensaje...'
+                          className="section__form--main-input"/>
+                <SubmitButton/>
             </form>
         )
     }

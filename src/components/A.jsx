@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import colors from '../colors/colors'
 
 const style = {
@@ -6,12 +6,12 @@ const style = {
     textDecoration: 'none'
 }
 
-export default class A extends Component{
-    render(){
+export default class A extends Component {
+    render() {
 
         const {href, children} = this.props
 
-        return(
+        return (
             <a href={href} style={style}>
                 {children}
             </a>

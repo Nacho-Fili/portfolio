@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import colors from '../colors/colors'
 
 
@@ -8,12 +8,12 @@ const style = {
     margin: '0 0 15px 0'
 }
 
-export default class Li extends Component{
-    render(){
+export default class Li extends Component {
+    render() {
 
         const {children} = this.props
 
-        return(
+        return (
             <li style={style}>{children}</li>
         )
     }

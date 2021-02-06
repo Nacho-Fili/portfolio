@@ -1,6 +1,6 @@
-export default class NoneDisplay{
-    static createStyleObject(props){
+export default class NoneDisplay {
+    static createStyleObject(props) {
         const voidObject = {}
-        return(voidObject)
+        return (voidObject)
     }
 }

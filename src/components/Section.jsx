@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 import colors from '../colors/colors'
 
@@ -11,12 +11,12 @@ const style = {
     justifyContent: 'center'
 }
 
-export default class Section extends Component{
-    render(){
+export default class Section extends Component {
+    render() {
 
         const {children} = this.props
 
-        return(
+        return (
             <section style={style}>
                 {children}
             </section>

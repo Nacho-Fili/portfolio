@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 const style = (_gridColumn, _gridRow) => ({
     gridColumn: _gridColumn,
@@ -9,20 +9,20 @@ const style = (_gridColumn, _gridRow) => ({
     height: '90%'
 })
 
-export default class GridImg extends Component{
+export default class GridImg extends Component {
 
-    render(){
+    render() {
 
         const {src, alt} = this.props
         let {gridColumn, gridRow} = this.props
 
-        if(!gridRow)
+        if (!gridRow)
             gridRow = '1/2'
 
-        if(!gridColumn)
+        if (!gridColumn)
             gridColumn = '1/2'
 
-        return(
+        return (
             <img src={src} alt={alt} style={style(gridColumn, gridRow)}/>
         )
     }

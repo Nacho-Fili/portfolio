@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import colors from '../colors/colors'
 
 const style = {
@@ -6,15 +6,15 @@ const style = {
     marginTop: '10vh',
 }
 
-export default class H1 extends Component{
-    render(){
-    
+export default class H1 extends Component {
+    render() {
+
         const {children} = this.props
-    
-        return(
+
+        return (
             <h1 style={style}>
                 {children}
-            </h1>  
+            </h1>
         )
     }
 }

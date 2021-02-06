@@ -1,11 +1,11 @@
-export default class Flex{
-    static createStyleObject(props){
+export default class Flex {
+    static createStyleObject(props) {
         const {flexDirection, alignItems, justifyContent} = props
 
-        return({
+        return ({
             display: 'flex',
             flexDirection: flexDirection,
-            alignItems: alignItems, 
+            alignItems: alignItems,
             justifyContent: justifyContent
         })
     }

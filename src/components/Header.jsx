@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import colors from '../colors/colors'
 
 const style = (_flexDirection) => ({
@@ -12,12 +12,12 @@ const style = (_flexDirection) => ({
     color: colors.light,
 })
 
-export default class Header extends Component{
-    render(){
+export default class Header extends Component {
+    render() {
 
         const {children, flexDirection} = this.props
 
-        return(
+        return (
             <header style={style(flexDirection)}>
                 {children}
             </header>
