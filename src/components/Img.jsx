@@ -1,23 +1,52 @@
-import React, {Component} from 'react'
+import React from 'react'
+import { useState } from 'react'
 
-const style = {
+const style = newSize => ({
     objectFit: 'fill',
     objectPosition: 'center',
-    height: '100%',
-    width: '100%',
+    height: newSize,
+    width: newSize,
     display: 'block',
     padding: '10px',
     alignSelf: 'center'
-}
+})
 
-export default class Img extends Component {
+export default function Img (props) {
 
-    render() {
+    const EXPANDED_SIZE = '90%'
+    const ORIGINAL_SIZE = '70%'
+    const [cursor, setCursor] = useState('default')
+    const [ size, setSize ]   = useState(ORIGINAL_SIZE)
 
-        const {src, alt} = this.props
+    const {src, alt} = props
 
-        return (
-            <img src={src} alt={alt} style={style}/>
-        )
-    }
+    return (
+        <img
+
+            onClick= {() =>{
+                    console.log("click");
+                }
+            }
+            
+            onMouseEnter = { () => { 
+                    setCursor('pointer')
+                    setSize(EXPANDED_SIZE) 
+                }
+            }
+
+            onMouseLeave = { () => { 
+                    setCursor('default')
+                    setSize(ORIGINAL_SIZE) 
+                }
+            }
+
+            src={src} 
+            alt={alt}
+            style={{
+                ...style(size), 
+                cursor
+            }}
+        />
+    )
+    
 }

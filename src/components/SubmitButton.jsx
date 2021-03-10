@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {useState} from 'react'
 import colors from '../colors/colors'
 
 const style = ({cursor}) => ({
@@ -14,24 +14,19 @@ const style = ({cursor}) => ({
     cursor
 })
 
-export default class SubmitButton extends Component {
+export default function SubmitButton(){
 
-    state= {
-        cursor: 'default'
-    }
+    const [cursor, setCursor] = useState('default')
+
+
+    return (
+        <input 
+        onMouseEnter={e => setCursor('pointer')}
+        onMouseLeave={e => setCursor('default')}
+        onClick={e => e.preventDefault()}
+        style={style(cursor)} type="submit"
+        value="Enviar"/>
+    )
     
-    changeDefaultToPointer = () => this.setState({cursor: 'pointer'})
-
-    changePointerToDefault = () => this.setState({cursor: 'default'})
-
-    render() {
-
-        return (
-            <input 
-            onMouseEnter={this.changeDefaultToPointer}
-            onMouseLeave={this.changePointerToDefault}
-            style={style(this.state)} type="submit"/>
-        )
-    }
 }
 

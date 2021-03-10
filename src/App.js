@@ -2,11 +2,11 @@ import Header from './components/Header';
 import Section from './components/Section';
 import Footer from './components/Footer';
 import A from './components/A';
-import Form from './components/Form'
+import Form from './components/Form/Form'
 import H1 from './components/H1'
 import H2 from './components/H2'
 import Li from './components/Li'
-import Ul from './components/Ul'
+import Ul from './components/Ul/Ul'
 import P from './components/P'
 import Div from './components/Div'
 import Img from './components/Img'
@@ -38,7 +38,7 @@ function App() {
                 <Div width='95vw' height='auto' display={Flex} flexDirection='column' alignItems='center'
                      justifyContent='center' id="proyectos">
                     <H2>Portafolio</H2>
-                    <Div width='60vw' height='auto' display={Block}>
+                    <Div width='60vw' height='auto' display={Block} className='container'>
                         <Div display={Flex} alignItems='center' justifyContent='center'>
                             <Img src={image1} alt='Image 1'/>
                         </Div>
