@@ -1,32 +1,39 @@
-import React, {Component} from 'react'
+import React, {useContext} from 'react'
 import NoneDisplay from '../utils/NoneDisplay'
+import ProjectContext from '../context/ProjectContext'
+import colors from '../colors/colors'
 
 
-const style = (_width, _height, displayStyle) => ({
+const style = (_width, _height, displayStyle, backgroundColor) => ({
     height: _height,
     width: _width,
     margin: '0',
+    paddingBottom: '20px',
+    backgroundColor,
     ...displayStyle
 })
 
-export default class Div extends Component {
+export default function Div(props){
 
-    render() {
+    const {projectMap} = useContext(ProjectContext)
 
-        const {children, width, height, display, id} = this.props
-        let displayStyle
+    const {children, width, height, display, id, name, className } = props
+    let {backgroundColor} = props
 
-        if (!display)
-            displayStyle = NoneDisplay.createStyleObject()
+    let displayStyle
 
-        else
-            displayStyle = display.createStyleObject(this.props)
+    if (!display)
+        displayStyle = NoneDisplay.createStyleObject()
 
+    else
+        displayStyle = display.createStyleObject(props)
 
-        return (
-            <div style={style(width, height, displayStyle)} name={id}>
-                {children}
-            </div>
-        )
-    }
+    if(projectMap.get(name) && !backgroundColor)
+        backgroundColor = colors.strong
+
+    return (
+        <div style={style(width, height, displayStyle, backgroundColor)} className={className} name={id}>
+            {children}
+        </div>
+    )
 }

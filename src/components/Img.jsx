@@ -1,52 +1,47 @@
-import React from 'react'
-import { useState } from 'react'
+import { useContext } from 'react'
+import useImg from '../hooks/UseImg'
+import colors from '../colors/colors'
+import ProjectSpec from './ProjectSpec'
+import ProjectContext from '../context/ProjectContext'
 
-const style = newSize => ({
+const style = (newSize, newCursor, showProject) => ({
     objectFit: 'fill',
     objectPosition: 'center',
     height: newSize,
     width: newSize,
-    display: 'block',
+    cursor: newCursor,
     padding: '10px',
     alignSelf: 'center'
 })
 
 export default function Img (props) {
 
-    const EXPANDED_SIZE = '90%'
-    const ORIGINAL_SIZE = '70%'
-    const [cursor, setCursor] = useState('default')
-    const [ size, setSize ]   = useState(ORIGINAL_SIZE)
+    const { size, cursor, onHover, exitHover } = useImg('45%')
+
+    const {isInProjectState, projectMap, setProjectState} = useContext(ProjectContext);
 
     const {src, alt} = props
 
+    const key = Object.keys(isInProjectState).find(key => key === alt)
+
     return (
-        <img
+        <div className='main--photo-container' style={{height:'inherit', width:'100%', display:'flex', alignItems:'center', justifyContent:'center'}}>
+            <img
+                onClick= { () => setProjectState({
+                    ...isInProjectState,
+                    [key]: !projectMap.get(alt)
+                })}
 
-            onClick= {() =>{
-                    console.log("click");
-                }
-            }
-            
-            onMouseEnter = { () => { 
-                    setCursor('pointer')
-                    setSize(EXPANDED_SIZE) 
-                }
-            }
+                onMouseEnter = {onHover}
+                onMouseLeave = {exitHover}
 
-            onMouseLeave = { () => { 
-                    setCursor('default')
-                    setSize(ORIGINAL_SIZE) 
-                }
-            }
-
-            src={src} 
-            alt={alt}
-            style={{
-                ...style(size), 
-                cursor
-            }}
-        />
+                src={src} 
+                alt={alt}
+                style= {style(size, cursor, projectMap.get(alt))}
+            />
+            {projectMap.get(alt) && <div className="main--photo-container__description" style={{width: '50vw', height:'100%', backgroundColor:colors.strong}}> <ProjectSpec alt={alt}/> </div>}
+        </ div>
     )
-    
+
+        
 }

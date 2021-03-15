@@ -4,6 +4,7 @@ import colors from '../colors/colors'
 
 const style = {
     backgroundColor: colors.midStrong,
+    width: '100vw',
     minHeight: '71.4vh',
     display: 'flex',
     flexDirection: 'column',

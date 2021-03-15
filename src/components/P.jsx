@@ -1,18 +1,19 @@
 import React, {Component} from 'react'
 import colors from '../colors/colors'
 
-const style = {
+const style = styleToAdd => ({
     color: colors.light,
     maxWidth: '70vw',
-}
+    ...styleToAdd
+})
 
 export default class P extends Component {
     render() {
 
-        const {children} = this.props
+        const {children, styleToAdd} = this.props
 
         return (
-            <p style={style}>{children}</p>
+            <p style={style(styleToAdd)}>{children}</p>
         )
     }
 }

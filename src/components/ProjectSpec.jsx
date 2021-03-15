@@ -1,19 +1,38 @@
-import React, {useState} from 'react';
+import React from 'react';
+import Div from './Div'
+import Block from '../utils/Block';
+import H3 from './H3'
+import P from './P'
+import A from './A'
+import projects from '../projects'
 
 export default function ProjectSpec(props){
-    const { projectImgSrc } = props;
-    
-    const [display, setDisplay] = useState('none');
 
-    const style = (displayStyle) => ({
-        display: displayStyle,
-    })
-    
-    
+    const style = {
+        textAlign: 'justify',
+        padding: '0 20px 20px 40px'
+    }
 
-    return(
-        <div style={style(display)} >
-            <img src={projectImgSrc} alt="Proyecto"/>
-       </div>
+    const { alt } = props
+
+    return( 
+        <Div  className='main--photo-container__description' display={Block}>
+            <H3> Descripción    </H3>
+            <P styleToAdd={style}>  {projects.get(alt).description}  </P>
+            
+            <H3> Tecnologias    </H3>
+            <P styleToAdd={style}>  {projects.get(alt).technologies}    </P>
+            
+            <H3> Repo           </H3>
+            <A href={projects.get(alt).repo} styleToAdd={style}>  {projects.get(alt).repo}           </A>
+
+            {
+            projects.get(alt).site && 
+                <>
+                    <H3>Sitio</H3>
+                    <A href={projects.get(alt).site} styleToAdd={style}>{projects.get(alt).site}</A>
+                </>
+            }
+        </Div>
     )
 }
