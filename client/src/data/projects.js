@@ -28,7 +28,8 @@ const projects = {
     LEARNING_SHEET_MUSIC: {
         description: 'Esta aplicacion web fue diseñada pensando en que los usuarios puedan aprender a leer partituras musicales y a su vez puedan tener un seguimiento '+
         'de parte de su docente. Cualquier persona puede darse de alta como docente y tener distintos grupos a los que les puede monitorear el rendimiento y la cantidad ' + 
-        'de tiempo que sus alumnos practican, recibiendo un informe mensual con estas especificaciones.',
+        'de tiempo que sus alumnos practican, recibiendo un informe mensual con estas especificaciones.' +
+        'ESTA APLICACIÓN AÚN ESTÁ EN DESARROLLO',
 
         technologies: 'Esta aplicacion fue desarrollada con Java Spring security, mvc y ReactJS',
         
