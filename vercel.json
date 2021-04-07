@@ -1,0 +1,18 @@
+{
+    "routes": [
+        {
+            "src": "/",
+            "methods": [
+                "GET"
+            ],
+            "dest": "/api/serveStatic.js"
+        },
+        {
+            "src": "/send-mail",
+            "methods": [
+                "POST"
+            ],
+            "dest": "/api/sendMail.js"
+        }
+    ]
+}
