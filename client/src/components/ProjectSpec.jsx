@@ -4,7 +4,7 @@ import Block from '../utils/Block';
 import H3 from './H3'
 import P from './P'
 import A from './A'
-import projects from '../projects'
+import projects from '../data/projects'
 
 export default function ProjectSpec(props){
 

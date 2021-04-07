@@ -4,7 +4,8 @@ import colors from '../colors/colors'
 const style = styleToAdd => ({
     ...styleToAdd,
     color: colors.light,
-    textDecoration: 'none'
+    textDecoration: 'none',
+    fontSize: '1.3rem'
 })
 
 export default class A extends Component {

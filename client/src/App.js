@@ -74,7 +74,18 @@ function App() {
                     </Div>
                     <Div id='sobremi'>
                         <H2> Sobre mi </H2>
-                        <P>Blablabla</P>
+                        <P>Soy un estudiante de Ingeniería informática de 20 años al que le apasiona la tecnología, el desarrollo web y los videojuegos.
+                            A los 18 años me adentré en el mundo de la programación mediante la plataforma de educación online platzi en la
+                            que adquirí conocimientos básicos sobre programación en el lenguaje Javascript antes de entrar a la carrera de ingeniería en la UBA.
+                            Luego seguí estudiando en Platzi mientras asistía a la universidad, compaginando mis prácticas de programación en C en la facultad
+                            con la instrucción algo más avanzada en Platzi. Mis proyectos personales se centran en resolver problemas puntuales de personas de mi entorno
+                            y ponerme nuevos desafíos con cosas que desconozco, porque con los libros solo no se aprende, hay que poner en práctica lo que se ve en los libros
+                            para realmente comenzar a dominar el conocimiento. Comencé con un proyecto en JS vanilla CSS y HTML para dominarlos. Luego aprendí a manejar el framework
+                            React, el cual puse en práctica construyendo este portafolio y que posteriormente seguí utilizando en la aplicación learning-to-read-sheet-music. Este último proyecto
+                            es el más ambicioso que he encarado hasta ahora, incluyendo conexión con base de datos y un backend no trivial implementado con Java spring, lenguaje en el que me inicié
+                            en Platzi y seguí poniendo en práctica durante mis estudios universitarios en un curso destinado a aprender las bases de POO. Este proyecto aun está en desarrollo.
+         
+                        </P>
                     </Div> 
                     
 

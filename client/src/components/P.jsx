@@ -4,7 +4,8 @@ import colors from '../colors/colors'
 const style = styleToAdd => ({
     color: colors.light,
     maxWidth: '70vw',
-    ...styleToAdd
+    ...styleToAdd,
+    fontSize: '1.3rem'
 })
 
 export default class P extends Component {

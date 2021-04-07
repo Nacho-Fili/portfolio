@@ -13,7 +13,7 @@ const style = {
         flexDirection: 'column',
         alignItems: 'center',
         margin: '0 20vh',
-        padding: '3vh 0'
+        padding: '3vh 0',
     },
 
     mainInput: {
@@ -21,7 +21,7 @@ const style = {
         border: `3px solid ${colors.strong}`,
         margin: '1vh 0',
         padding: '3vh 4vh',
-        fontSize: '0.9rem',
+        fontSize: '1.3rem',
         height: '35vh',
         width: '40vw',
         backgroundColor: 'rgba(255,255,255,0.3)',
