@@ -7,11 +7,15 @@ export default function H3(props){
 
     const style = {
         color: colors.light,
-        paddingLeft: '20px' 
+        paddingLeft: '20px',
+        fontSize: '1.5rem',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 
     return(
-        <h3 style={ style }>
+        <h3 style={ style}>
             <strong>
                 {children}
             </strong>

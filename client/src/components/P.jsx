@@ -5,7 +5,7 @@ const style = styleToAdd => ({
     color: colors.light,
     maxWidth: '70vw',
     ...styleToAdd,
-    fontSize: '1.3rem'
+    fontSize: '110%'
 })
 
 export default class P extends Component {

@@ -11,12 +11,14 @@ const style = (newSize, newCursor, showProject) => ({
     width: newSize,
     cursor: newCursor,
     padding: '10px',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    minWidth: '300px',
+    
 })
 
 export default function Img (props) {
 
-    const { size, cursor, onHover, exitHover } = useImg('45%')
+    const { size, cursor, onHover, exitHover } = useImg('55%')
 
     const {isInProjectState, projectMap, setProjectState} = useContext(ProjectContext);
 

@@ -1,11 +1,29 @@
 .section__form--main-input::placeholder {
     font-family: 'Fira Sans', sans-serif;
     color: #fff5c0;
-    font-size: 1.1rem;
+    font-size: 110%;
 }
 
 .section__form--input::placeholder {
     font-family: 'Fira Sans', sans-serif;
     color: #fff5c0;
-    font-size: 1rem;
+    font-size: 120%;
+}
+
+.section__form--input{
+    width: 45vw;    
+}
+
+.section__form--main-input{
+    width: 45vw;    
+}
+
+@media (max-width: 800px){
+    .section__form--input{
+        width: 80vw;    
+    }
+
+    .section__form--main-input{
+        width: 80vw;    
+    }
 }

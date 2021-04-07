@@ -23,7 +23,6 @@ const style = {
         padding: '3vh 4vh',
         fontSize: '1.3rem',
         height: '35vh',
-        width: '40vw',
         backgroundColor: 'rgba(255,255,255,0.3)',
         outline: 'none',
         color: colors.light,

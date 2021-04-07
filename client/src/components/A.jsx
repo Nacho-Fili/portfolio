@@ -5,7 +5,7 @@ const style = styleToAdd => ({
     ...styleToAdd,
     color: colors.light,
     textDecoration: 'none',
-    fontSize: '1.3rem'
+    fontSize: '120%'
 })
 
 export default class A extends Component {

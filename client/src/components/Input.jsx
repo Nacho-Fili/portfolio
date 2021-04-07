@@ -6,7 +6,7 @@ const style = {
     margin: '0.5vh',
     border: `3px solid ${colors.strong}`,
     padding: '1vh 4vh',
-    width: '40vw',
+    height: '3.5vh',
     backgroundColor: 'rgba(255,255,255,0.3)',
     outline: 'none',
     color: colors.light
