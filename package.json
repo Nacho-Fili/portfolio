@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./server/src/test/**/*.js --recursive",
-    "start": "node server/index.js",
+    "test": "mocha ./api/src/test/**/*.js --recursive",
+    "start": "node api/index.js",
     "build": "cd client && npm install && npm run build"
   },
   "keywords": [],
