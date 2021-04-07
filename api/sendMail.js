@@ -1,3 +1,4 @@
+const { config, myOAuth2Client } = require("./src/main/config/mailerConfig")
 const Transporter = require("./src/main/utils/mailer")
 
 module.exports = async (req, res) => {
