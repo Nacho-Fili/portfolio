@@ -14,16 +14,10 @@
     "redirects": [
         {
             "source": "/",
-            "methods": [
-                "GET" 
-            ],
             "destination": "/client/build/index.html"
         },
         {
             "source": "/send-mail",
-            "methods": [
-                "POST"
-            ],
             "destination": "/api/sendMail.js",
             "permanent": false
         }
