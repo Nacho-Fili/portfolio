@@ -11,20 +11,21 @@
         }
     ],
     
-    "routes": [
+    "redirects": [
         {
-            "src": "/",
+            "source": "/",
             "methods": [
                 "GET" 
             ],
-            "dest": "/client/build/index.html"
+            "destination": "/client/build/index.html"
         },
         {
-            "src": "/send-mail",
+            "source": "/send-mail",
             "methods": [
                 "POST"
             ],
-            "dest": "/api/sendMail.js"
+            "destination": "/api/sendMail.js",
+            "permanent": false
         }
     ]
 }
