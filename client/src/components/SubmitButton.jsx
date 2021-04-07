@@ -23,7 +23,6 @@ export default function SubmitButton(){
         <input 
         onMouseEnter={e => setCursor('pointer')}
         onMouseLeave={e => setCursor('default')}
-        onClick={e => e.preventDefault()}
         style={style(cursor)} type="submit"
         value="Enviar"/>
     )

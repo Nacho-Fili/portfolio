@@ -16,10 +16,10 @@ export default class Input extends Component {
 
     render() {
 
-        const {type, placeholder, className} = this.props
+        const {type, placeholder, className, onchange} = this.props
 
         return (
-            <input type={type} placeholder={placeholder} style={style} className={className}/>
+            <input onChange={onchange} type={type} placeholder={placeholder} style={style} className={className}/>
         )
     }
 }
