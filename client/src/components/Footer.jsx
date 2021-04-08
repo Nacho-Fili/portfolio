@@ -9,6 +9,7 @@ const style = (_justifyContent, _flexDirection) => ({
     flexDirection: _flexDirection,
     justifyContent: _justifyContent,
     alignItems: 'center',
+    width: '100vw'
 
 })
 

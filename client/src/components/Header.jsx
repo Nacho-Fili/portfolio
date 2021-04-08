@@ -10,6 +10,7 @@ const style = (_flexDirection) => ({
     justifyContent: 'center',
     fontSize: 'calc(10px + 1vmin)',
     color: colors.light,
+    width: '100vw'
 })
 
 export default class Header extends Component {

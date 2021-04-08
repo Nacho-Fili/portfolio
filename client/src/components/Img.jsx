@@ -18,7 +18,7 @@ const style = (newSize, newCursor, showProject) => ({
 
 export default function Img (props) {
 
-    const { size, cursor, onHover, exitHover } = useImg('55%')
+    const { size, cursor, onHover, exitHover } = useImg('50%')
 
     const {isInProjectState, projectMap, setProjectState} = useContext(ProjectContext);
 
@@ -27,7 +27,7 @@ export default function Img (props) {
     const key = Object.keys(isInProjectState).find(key => key === alt)
 
     return (
-        <div className='main--photo-container' style={{height:'inherit', width:'100%', display:'flex', alignItems:'center', justifyContent:'center'}}>
+        <div className='main--photo-container' style={{height:'inherit', width:'98%', display:'flex', alignItems:'center', justifyContent:'center'}}>
             <img
                 onClick= { () => setProjectState({
                     ...isInProjectState,

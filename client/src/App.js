@@ -20,6 +20,7 @@ import Block from './utils/Block'
 
 import improvingReactionsImg from './images/EntrenamientosDeReaccion.png'
 import algoblocksImg from './images/algoblocks.png'
+import learningToReadSheetMusicImg from './images/LearningToReadSheetMusic.png'
 
 import {ProjectContextProvider} from './context/ProjectContext'
 
@@ -53,7 +54,7 @@ function App() {
                                 <Img src={algoblocksImg} alt='algoblocks'/>
                             </Div>
                             <Div display={Flex} alignItems='center' justifyContent='center' name='learningSheetMusic'>
-                                <Img src={improvingReactionsImg} alt='learningSheetMusic'/>
+                                <Img src={learningToReadSheetMusicImg} alt='learningSheetMusic'/>
                             </Div>
                         </Div>
                     </Div>

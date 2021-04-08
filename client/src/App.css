@@ -1,6 +1,6 @@
 .App {
     font-family: 'Fira Sans', sans-serif;
-    width: 100vw;
+    width: 99vw;
 }
 
 @media(max-width: 900px){
