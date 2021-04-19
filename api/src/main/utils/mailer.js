@@ -17,6 +17,7 @@ class Transporter{
         return this.transporter.sendMail(mailOptions, err => {
             if(err){
                 console.log("Error al enviar el email")
+                this.transporter.close()
                 console.log(err)
                 res.status(500)
                 res.send({
@@ -24,6 +25,7 @@ class Transporter{
                 })
             } else {
                 console.log("Email enviado correctamente")
+                this.transporter.close()
                 res.status(200)
                 res.send({
                     message: 'Email has been sent'

@@ -1,0 +1,9 @@
+.img{
+        object-fit: fill;
+        object-position: center;
+        height: 90%;
+        width: 90%;
+        display: block;
+        padding: 10px;
+        align-self: center;
+}
