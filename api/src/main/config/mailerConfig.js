@@ -18,8 +18,7 @@ const config = accessToken => ({
         user: process.env.GMAIL_USER, 
         clientId: CLIENT_ID,
         clientSecret: CLIENT_SECRET,
-        refreshToken: REFRESH_TOKEN,
-        accessToken: accessToken
+        refreshToken: REFRESH_TOKEN
     },
     tls:{
         rejectUnauthorized: false
