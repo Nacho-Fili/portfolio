@@ -2,12 +2,11 @@ import axios from "axios"
 
 
 export default function sendEmail(messageData){
-    //"https://ignacio-filipovskis.vercel.app"
-    
+    console.log(messageData)
     return axios.post(`/send-mail`, {
         "data": {
             "sender": messageData.sender,
-            "email": messageData.email,
+            "email": messageData.emailSender,
             "message": messageData.message
         }
     }, {

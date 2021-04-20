@@ -9,14 +9,17 @@ const UseForm = () => {
 
     const setMessage = (_message) => {
         __setMessage(_message)
+        console.log(message)
     }
 
     const setSender = (_sender) => {
         __setSender(_sender)
+        console.log(sender)
     }
 
     const setEmailSender = (_emailSender) => {
         __setEmailSender(_emailSender)
+        console.log(emailSender)
     }
 
     const submit = (e, messageDetails) => {
