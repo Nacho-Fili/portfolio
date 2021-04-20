@@ -12,6 +12,7 @@ module.exports = async (req, res) => {
 
     try{
         transporter.send(mailOptions, res)
+        res.status(200)
     } catch(err) {
         console.log("An error has ocurred posting the message")
     }

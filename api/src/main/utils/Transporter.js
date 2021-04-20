@@ -25,9 +25,20 @@ class Transporter{
                     
                     else {
                         console.log('Mensaje posteado correctamente')
-                        this.connection.end()
                     }
                 })
+
+                this.connection.query(
+                    'INSERT INTO messages(sender, email, message) VALUES (?, ?, ?)', 
+                    [sender, email, message], 
+                    (error, result) => {
+                        
+                        if(error) { console.log('Ha ocurrido un error posteando el mensaje ' + error); throw error }
+                        
+                        else console.log('Mensaje posteado correctamente ' + result)
+                    })
+                
+                this.connection.end()
         })
         
     }
