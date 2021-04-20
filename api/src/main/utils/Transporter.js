@@ -18,8 +18,8 @@ class Transporter{
         })
         
         this.connection.query(
-            'INSERT INTO messages(id, sender, email, message) VALUES (?, ?, ?, ?)', 
-            [1, sender, email, message], 
+            'INSERT INTO messages(sender, email, message) VALUES (?, ?, ?)', 
+            [sender, email, message], 
             (error, result) => {
                 
                 if(error) { console.log('Ha ocurrido un error posteando el mensaje ' + error); throw error }
