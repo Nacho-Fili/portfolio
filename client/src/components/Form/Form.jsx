@@ -34,12 +34,12 @@ const style = {
 export default function Form(){
 
 
-    const { message, setSender, setEmailSender, setMessage } = UseForm()
+    const { message, sender, emailSender, setSender, setEmailSender, setMessage } = UseForm()
     const { submit } =  UseForm()
 
 
     return (
-        <form onSubmit={e => submit(e, message)} style={style.form} action="">
+        <form onSubmit={e => submit(e, {message, sender, emailSender})} style={style.form} action="">
             <Input 
                 onchange={ ({ target }) => setSender(target.value)} 
                 type='text' 
@@ -49,7 +49,7 @@ export default function Form(){
             <Input 
                 onchange={ ({ target }) => setEmailSender(target.value)}
                 type='email' 
-                className='section__form--input' 
+                className='section__form--input'
                 placeholder='E-Mail...'/>
             
             <textarea 

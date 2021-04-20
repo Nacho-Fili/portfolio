@@ -1,11 +1,15 @@
 import axios from "axios"
 
 
-export default function sendEmail(message){
-    const ENDPOINT = "https://ignacio-filipovskis.vercel.app"
+export default function sendEmail(messageData){
+    //"https://ignacio-filipovskis.vercel.app"
     
-    return axios.post(`${ENDPOINT}/send-mail`, {
-        "data": message
+    return axios.post(`/send-mail`, {
+        "data": {
+            "sender": messageData.sender,
+            "email": messageData.email,
+            "message": messageData.message
+        }
     }, {
         Headers: {
             "Content-Type": "application/json"

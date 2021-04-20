@@ -1,49 +1,33 @@
-const nodemailer = require("nodemailer")
+const MySQL = require('mysql')
 
 class Transporter{
 
-    constructor(config, oauth2Client){
-        this.oauth2Client = oauth2Client
-        this.config = config
+    constructor(connectionConfig){
+        this.connection = MySQL.createConnection(connectionConfig)
     }
 
-    async send(mailOptions, res){
-        
-        const accessToken = this.oauth2Client.getAccessToken()
-
-        this.transporter = await nodemailer.createTransport(this.config(accessToken))
-        
-        console.log("Enviando Email a " + mailOptions.to )
-        return this.transporter.sendMail(mailOptions, err => {
-            if(err){
-                console.log("Error al enviar el email")
-                this.transporter.close()
-                console.log(err)
-                res.status(500)
-                res.send({
-                    message: err
-                })
+    async send({ sender, email, message }){
+        this.connection.connect((error) => {
+            if(error){ 
+                console.error(error)
+                console.error('Database connection failed')
+                throw error
             } else {
-                console.log("Email enviado correctamente")
-                this.transporter.close()
-                res.status(200)
-                res.send({
-                    message: 'Email has been sent'
-                })
+                console.log('Successful connection')
             }
         })
-    }
-
-    async getHost(){
-        const accessToken = this.oauth2Client.getAccessToken()
-        this.transporter = await nodemailer.createTransport(this.config(accessToken))
-        return this.transporter.options.mailerTestConfig.host
-    }
-
-    async getPort(){
-        const accessToken = this.oauth2Client.getAccessToken()
-        this.transporter = await nodemailer.createTransport(this.config(accessToken))
-        return this.transporter.options.mailerTestConfig.port
+        
+        this.connection.query(
+            'INSERT INTO message(id, sender, email, message) VALUES (?, ?, ?, ?)', 
+            [1, sender, email, message], 
+            (error, result) => {
+                
+                if(error) { console.log('Ha ocurrido un error posteando el mensaje ' + error); throw error }
+                
+                else console.log('Mensaje posteado correctamente ' + result)
+            })
+        
+        this.connection.end()
     }
 }
 
