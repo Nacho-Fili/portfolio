@@ -1,5 +1,5 @@
 const { connectionConfig } = require("./src/main/config/mailerConfig")
-const Transporter = require("./src/main/utils/mailer")
+const Transporter = require("./src/main/utils/Transporter")
 
 module.exports = async (req, res) => {
     transporter = new Transporter(connectionConfig)
