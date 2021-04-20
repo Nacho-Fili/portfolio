@@ -36,7 +36,6 @@ const UseForm = () => {
             .catch(err => {
                 e.target.reset()
                 console.error(err)
-                alert('Ha ocurrido un error')
             })
     }
 
