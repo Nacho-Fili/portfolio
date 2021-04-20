@@ -18,7 +18,7 @@ class Transporter{
         })
         
         this.connection.query(
-            'INSERT INTO message(id, sender, email, message) VALUES (?, ?, ?, ?)', 
+            'INSERT INTO messages(id, sender, email, message) VALUES (?, ?, ?, ?)', 
             [1, sender, email, message], 
             (error, result) => {
                 
