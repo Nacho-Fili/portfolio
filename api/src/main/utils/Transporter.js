@@ -23,10 +23,11 @@ class Transporter{
                     
                     if(error) { console.log('Ha ocurrido un error posteando el mensaje ' + error); throw error }
                     
-                    else console.log('Mensaje posteado correctamente ' + result)
+                    else {
+                        console.log('Mensaje posteado correctamente')
+                        this.connection.end()
+                    }
                 })
-            
-            this.connection.end()
         })
         
     }
