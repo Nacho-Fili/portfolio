@@ -1,13 +1,13 @@
-const mysql = require('mysql')
+const config = {
+    auth: {
+        user: 'n.filipovskis.notifyer@outlook.com',
+        pass: 'Brillitos00'
+    },
 
-const connectionConfig = {
-    host:       process.env.HOST,        
-    user:       process.env.USER,
-    password:   process.env.DB_PASSWORD,
-    database:   process.env.DATABASE,
-    port:       process.env.DATABASE_PORT
+    mailsConfig: {
+        from: 'n.filipovskis.notifyer@outlook.com',
+        to: 'n.filipovskis@gmail.com'
+    }
 }
 
-module.exports = {
-    connectionConfig
-}
+module.exports = config
