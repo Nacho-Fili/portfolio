@@ -13,10 +13,10 @@ class MessageSender {
             from: this.mailsConfig.from,
             to: this.mailsConfig.to,
             text: message,
-            onError: e => console.error(`Error enviando email de ${config.from} a ${config.to}
+            onError: e => console.error(`Error enviando email de ${this.mailsConfig.from} a ${this.mailsConfig.to}
             ${e}` ),
             onSuccess: i => {
-                console.log(`Mensaje enviado correctamente de ${config.from} a ${config.to}
+                console.log(`Mensaje enviado correctamente de ${this.mailsConfig.from} a ${this.mailsConfig.to}
                 ${i}`)
                 return message
             }
