@@ -13,7 +13,7 @@ class Transporter{
                     reply-to: ${email}
                     message: ${message}`
 
-        return this.sender.sendMail(text)
+        return await this.sender.sendMail(text)
     }
 }
 

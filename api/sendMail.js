@@ -1,15 +1,15 @@
 const Transporter = require("./src/main/utils/Transporter")
 const mailerConfig = require('./src/main/config/mailerConfig')
 
-module.exports = async (req, res) => {
+module.exports = async ({ body }, res) => {
     transporter = new Transporter(mailerConfig)
-    const { body } = req
-    console.log(body)
+    const { data } = body
+    const { sender, email, message } = data
 
     const mailOptions = {
-        sender: req.body.data.sender,
-        email: req.body.data.email,
-        message: req.body.data.message
+        sender: sender,
+        email: email,
+        message: message
     }
 
     try{

@@ -7,17 +7,15 @@ class MessageSender {
         this.mailsConfig = mailsConfig
     }
 
-    sendMail = message => {
+    sendMail = async message => {
         this.mailer.sendEmail({
             auth: this.auth,
             from: this.mailsConfig.from,
             to: this.mailsConfig.to,
             text: message,
-            onError: e => console.error(`Error enviando email de ${this.mailsConfig.from} a ${this.mailsConfig.to}
-            ${e}` ),
+            onError: () => console.error(`Error enviando email de ${this.mailsConfig.from} a ${this.mailsConfig.to}`),
             onSuccess: i => {
-                console.log(`Mensaje enviado correctamente de ${this.mailsConfig.from} a ${this.mailsConfig.to}
-                ${i}`)
+                console.log(`Mensaje enviado correctamente de ${this.mailsConfig.from} a ${this.mailsConfig.to}`)
                 return message
             }
         })
