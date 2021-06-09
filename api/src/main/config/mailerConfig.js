@@ -1,12 +1,12 @@
 const config = {
     auth: {
-        user: 'n.filipovskis.notifyer@outlook.com',
-        pass: 'Brillitos00'
+        user: process.env.NOTIFYER_EMAIL,
+        pass: process.env.NOTIFYER_PASS
     },
 
     mailsConfig: {
-        from: 'n.filipovskis.notifyer@outlook.com',
-        to: 'n.filipovskis@gmail.com'
+        from: process.env.NOTIFYER_EMAIL,
+        to: process.env.PERSONAL_EMAIL
     }
 }
 
