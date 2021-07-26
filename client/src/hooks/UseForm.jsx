@@ -8,26 +8,24 @@ const UseForm = () => {
     const [message, __setMessage] = useState()
 
     const setMessage = (_message) => {
-        __setMessage(`${_message}
-        
-        From: ${sender}, 
-        E-mail: ${emailSender}`)
+        __setMessage(_message)
+        console.log(message)
     }
 
     const setSender = (_sender) => {
         __setSender(_sender)
-        setMessage(message)
+        console.log(sender)
     }
 
     const setEmailSender = (_emailSender) => {
         __setEmailSender(_emailSender)
-        setMessage(message)
+        console.log(emailSender)
     }
 
-    const submit = (e, message) => {
+    const submit = (e, messageDetails) => {
         e.preventDefault()
         
-        sendEmail(message)
+        sendEmail(messageDetails)
             .then(() => {
                 e.target.reset()
                 __setSender('')
@@ -35,7 +33,10 @@ const UseForm = () => {
                 __setEmailSender('')
                 console.log("Email enviado!")
             })
-            .catch(err => console.error(err))
+            .catch(err => {
+                e.target.reset()
+                console.error(err)
+            })
     }
 
     return({

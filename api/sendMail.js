@@ -1,15 +1,24 @@
-const { config, myOAuth2Client } = require("./src/main/config/mailerConfig")
-const Transporter = require("./src/main/utils/mailer")
+const Transporter = require("./src/main/utils/Transporter")
+const mailerConfig = require('./src/main/config/mailerConfig')
 
-module.exports = async (req, res) => {
-    transporter = new Transporter(config, myOAuth2Client)
+module.exports = async ({ body }, res) => {
+    transporter = new Transporter(mailerConfig)
+    const { data } = body
+    const { sender, email, message } = data
 
     const mailOptions = {
-        from: process.env.GMAIL_USER,
-        to: process.env.MAIL,
-        subject: 'NOTIFICACIÓN DE CONTACTO',
-        text: req.body.data
+        sender: sender,
+        email: email,
+        message: message
     }
 
-    transporter.send(mailOptions, res)
+    try{
+        await transporter.send(mailOptions)
+        res.status(200)
+        console.log("Message sent " + res)
+        return res
+    } catch(err) {
+        console.log("An error has ocurred posting the message")
+        return res.status(400).json({message: "An error has ocurred posting the message"})
+    }
 }

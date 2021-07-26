@@ -1,15 +1,13 @@
-const nodemailer = require('nodemailer')
-
-const testAccount = nodemailer.createTestAccount();
 
 const mailerTestConfig = {
-    host: "smtp.ethereal.email",
-    port: 587,
-    secure: false,
     auth: {
-        user: testAccount.user,
-        pass: testAccount.pass
+        user: process.env.NOTIFYER_EMAIL,
+        pass: process.env.NOTIFYER_PASS
+    },
+    mailsConfig: {
+        from: process.env.NOTIFYER_EMAIL,
+        to: process.env.PERSONAL_EMAIL
     }
 }
 
-module.exports.mailerTestConfig = mailerTestConfig
+module.exports = mailerTestConfig

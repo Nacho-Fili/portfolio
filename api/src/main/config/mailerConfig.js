@@ -1,33 +1,14 @@
-const { google } = require('googleapis')
-const OAuth2 = google.auth.OAuth2
+const config = {
 
-
-const CLIENT_ID = process.env.CLIENT_ID 
-const CLIENT_SECRET = process.env.CLIENT_SECRET 
-const REDIRECT_URL = process.env.REDIRECT_URL 
-const REFRESH_TOKEN = process.env.REFRESH_TOKEN 
-
-
-
-const myOAuth2Client = new OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL)
-
-myOAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN })
-
-const config = () => ({
-    service: 'gmail',
     auth: {
-        type: 'OAuth2',
-        user: process.env.GMAIL_USER, 
-        clientId: CLIENT_ID,
-        clientSecret: CLIENT_SECRET,
-        refreshToken: REFRESH_TOKEN
+        user: process.env.NOTIFYER_EMAIL,
+        pass: process.env.NOTIFYER_PASS
     },
-    tls:{
-        rejectUnauthorized: false
-    }
-})
 
-module.exports = {
-    config,
-    myOAuth2Client
+    mailsConfig: {
+        from: process.env.NOTIFYER_EMAIL,
+        to: process.env.PERSONAL_EMAIL
+    }
 }
+
+module.exports = config
