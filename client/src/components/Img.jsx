@@ -25,7 +25,7 @@ export default function Img (props) {
     const {src, alt} = props
 
     const key = Object.keys(isInProjectState).find(key => key === alt)
-
+    
     return (
         <div className='main--photo-container' style={{height:'inherit', width:'98%', display:'flex', alignItems:'center', justifyContent:'center'}}>
             <img

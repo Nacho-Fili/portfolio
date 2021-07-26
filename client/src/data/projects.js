@@ -11,7 +11,7 @@ const projects = {
 
         site: 'https://improvingreactions-nacho-fili.vercel.app/',
 
-        repo: 'https://github.com/Nacho-Fili/improvingReactions'
+        repo: ['https://github.com/Nacho-Fili/improvingReactions']
     },
 
     ALGOBLOCKS: {
@@ -22,7 +22,7 @@ const projects = {
 
         technologies: 'Esta aplicación fue desarrollada con Java y JavaFX, implementado la arquitectura MVC con el patrón de diseño observer',
 
-        repo: 'https://github.com/angysaavedrafiuba/algoblocks'
+        repo: ['https://github.com/angysaavedrafiuba/algoblocks']
     },
 
     LEARNING_SHEET_MUSIC: {
@@ -33,8 +33,26 @@ const projects = {
 
         technologies: 'Esta aplicacion fue desarrollada con Java Spring security, mvc y ReactJS',
         
-        repo: 'https://github.com/angysaavedrafiuba/algoblocks'
-    }
+        repo: ['https://github.com/angysaavedrafiuba/algoblocks']
+    },
+
+    MOTORCYCLE_MANAGER: {
+        description: `Esta aplicación fue desarrollada como práctica personal. Es una aplicación
+        para administrar una determinada cantidad de recursos (motocicletas) que están disponibles en cantidades 
+        uniformemente en ciertos horarios durante el día. El login es simplemente con un username y
+        cada usuario puede solicitar solo un recurso por hora y debe guardarlos para que esta petición
+        sea persistida.`,
+
+        technologies: `Esta aplicacion fue desarrollada con NodeJS (express), PostgreSQL, ReactJS. El
+        deploy del frontend se hizo en Vercel y el deploy de la API en Heroku.`,
+        
+        site: 'https://motorcyclist-manager.vercel.app/',
+
+        repo:   [
+            `https://github.com/Nacho-Fili/motorcyclist-manager`,
+            `https://github.com/Nacho-Fili/motorcyclist-manager-api`
+        ]
+    },
 }
 
 
@@ -42,6 +60,7 @@ const projectsMap = new Map()
 projectsMap.set('impReactions', projects.IMPROVING_REACTIONS)
 projectsMap.set('algoblocks', projects.ALGOBLOCKS)
 projectsMap.set('learningSheetMusic', projects.LEARNING_SHEET_MUSIC)
+projectsMap.set('motorcyclistManager', projects.MOTORCYCLE_MANAGER)
 
 
 

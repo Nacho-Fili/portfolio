@@ -20,11 +20,14 @@ import Block from './utils/Block'
 
 import improvingReactionsImg from './images/EntrenamientosDeReaccion.png'
 import algoblocksImg from './images/algoblocks.png'
-import learningToReadSheetMusicImg from './images/LearningToReadSheetMusic.png'
+import motorcyclistManagerImg from './images/MotorcyclistManager.png'
 
 import {ProjectContextProvider} from './context/ProjectContext'
 
 import './App.css';
+
+console.log(motorcyclistManagerImg)
+
 
 
 function App() {
@@ -53,8 +56,8 @@ function App() {
                             <Div display={Flex} alignItems='center' justifyContent='center' name='algoblocks'>
                                 <Img src={algoblocksImg} alt='algoblocks'/>
                             </Div>
-                            <Div display={Flex} alignItems='center' justifyContent='center' name='learningSheetMusic'>
-                                <Img src={learningToReadSheetMusicImg} alt='learningSheetMusic'/>
+                            <Div display={Flex} alignItems='center' justifyContent='center' name='motorcyclistManager'>
+                                <Img src={motorcyclistManagerImg} alt='motorcyclistManager'/>
                             </Div>
                         </Div>
                     </Div>

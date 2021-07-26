@@ -10,12 +10,14 @@ export function ProjectContextProvider({children}){
     const [isInProjectState, setProjectState] = useState({
         impReactions: false,
         algoblocks: false,
-        learningSheetMusic: false
+        learningSheetMusic: false,
+        motorcyclistManager: false
     })
 
     projectMap.set('algoblocks', isInProjectState.algoblocks)
     projectMap.set('impReactions', isInProjectState.impReactions)
     projectMap.set('learningSheetMusic', isInProjectState.learningSheetMusic)
+    projectMap.set('motorcyclistManager', isInProjectState.motorcyclistManager)
 
     
     return (

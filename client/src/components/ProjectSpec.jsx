@@ -24,7 +24,15 @@ export default function ProjectSpec(props){
             <P styleToAdd={style}>  {projects.get(alt).technologies}    </P>
             
             <H3> Repo           </H3>
-            <A href={projects.get(alt).repo} styleToAdd={style}>  {projects.get(alt).repo}           </A>
+            <div style={{display:'flex', flexDirection:'column'}}>
+            {
+                projects.get(alt).repo
+                    .map(project => 
+                        <A href={project} styleToAdd={style}> 
+                            { project} 
+                        </A>)
+            }
+            </div>
 
             {
             projects.get(alt).site && 

@@ -7,11 +7,13 @@ const CLIENT_SECRET = process.env.CLIENT_SECRET
 const REDIRECT_URL = process.env.REDIRECT_URL 
 const REFRESH_TOKEN = process.env.REFRESH_TOKEN 
 
+
+
 const myOAuth2Client = new OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL)
 
 myOAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN })
 
-const config = accessToken => ({
+const config = () => ({
     service: 'gmail',
     auth: {
         type: 'OAuth2',
