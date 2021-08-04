@@ -1,18 +1,16 @@
 import React from 'react'
 
-import Header   from './components/Header';
+import NavBar   from './components/navBar/NavBar';
 import Section  from './components/Section';
 import Footer   from './components/Footer';
 import A        from './components/A';
 import Form     from './components/Form/Form'
-import H1       from './components/H1'
 import H2       from './components/H2'
 import Li       from './components/Li'
 import Ul       from './components/Ul/Ul'
 import P        from './components/P'
 import Div      from './components/Div'
 import Img      from './components/Img'
-import ScrollTo from './components/ScrollTo'
 
 
 import Flex from './utils/Flex'
@@ -34,17 +32,7 @@ function App() {
     return (
         <ProjectContextProvider>
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}  className="App">
-                <Header flexDirection={'column'}>
-                    <Div height='5vh' width='100vw' display={Flex} flexDirection='row ' justifyContent='space-around'
-                        alignItems='space-around'>
-                        <P><ScrollTo href="proyectos"> Proyectos </ScrollTo></P>
-                        <P><ScrollTo href="conocimientos"> Conocimientos </ScrollTo></P>
-                        <P><ScrollTo href="sobremi"> Sobre mi </ScrollTo></P>
-                        <P><ScrollTo href="contacto">Contacto </ScrollTo></P>
-                    </Div>
-                    <H1>Ignacio FILIPOVSKIS</H1>
-                    <P>Estudiante de Ingeniería Informática</P>
-                </Header>
+                <NavBar />
                 <Section>
                     <Div width='95vw' height='auto' display={Flex} flexDirection='column' alignItems='center'
                         justifyContent='center' id="proyectos">
@@ -106,7 +94,7 @@ function App() {
                     <A href='https://www.instagram.com/nacho_fili/'>Instagram</A>
 
                 </Footer>
-                <div>Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> </div>
+                <div style={{display: 'none'}}>Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> </div>
             </div>
         </ProjectContextProvider>
     );
