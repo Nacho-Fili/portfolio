@@ -1,6 +1,15 @@
+#root{
+    width: 100%;
+    min-width: 100vw;
+}
+
 .App {
     font-family: 'Fira Sans', sans-serif;
-    width: 99vw;
+    width: 100%;
+}
+
+.clickable:hover{
+    cursor: pointer;
 }
 
 @media(max-width: 900px){

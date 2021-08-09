@@ -1,0 +1,31 @@
+.main{
+    width: 100vw;
+    min-height: 71.4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main h2{
+    min-width: 50vw;
+    padding: 2vh 0 0 0;
+    font-size: 1.5rem;
+    margin: 5vh 0 3vh 0;
+    text-align: center;
+    align-self: center;
+}
+
+.knowledgeContainer{
+    width:52vw;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.mainText{
+    max-width: 70vw;
+    font-size: 110%;
+    text-align: justify;
+}

@@ -1,0 +1,12 @@
+.footer{
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+}
+
+.link{
+    text-decoration: none;
+    font-size: 120%;
+}

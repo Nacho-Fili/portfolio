@@ -1,10 +1,8 @@
 import React from 'react'
 import colors from '../../colors/colors'
-import SubmitButton from '../SubmitButton'
-import Input from '../Input'
 import './Form.css'
 import UseForm from '../../hooks/UseForm'
-
+import styles from './form.module.css'
 
 
 const style = {
@@ -30,6 +28,8 @@ const style = {
     }
 }
 
+const styleInput = { border: `3px solid ${colors.strong}`, color: colors.light }
+const submitButton = { color: colors.light, backgroundColor: colors.strong }
 
 export default function Form(){
 
@@ -40,27 +40,30 @@ export default function Form(){
 
     return (
         <form onSubmit={e => submit(e, {message, sender, emailSender})} style={style.form} action="">
-            <Input 
+            <input 
                 onchange={ ({ target }) => setSender(target.value)} 
                 type='text' 
-                className='section__form--input' 
-                placeholder='Nombre...'/>
+                className={`section__form--input ${styles.input}`}
+                placeholder='Nombre...'
+                style={styleInput}/>
 
-            <Input 
+            <input 
                 onchange={ ({ target }) => setEmailSender(target.value)}
                 type='email' 
-                className='section__form--input'
-                placeholder='E-Mail...'/>
+                className={`section__form--input ${styles.input}`}
+                placeholder='E-Mail...'
+                style={styleInput}/>
             
             <textarea 
                 onChange={ ({ target }) => setMessage(target.value)}
                 style={style.mainInput} 
                 type="text" 
                 placeholder='Mensaje...'
-                className="section__form--main-input"
-                />
+                className="section__form--main-input" />
 
-            <SubmitButton/>
+            <button type='submit' className={styles.submitBtn} style={submitButton}>
+                Enviar    
+            </button>
         </form>
     )
 }

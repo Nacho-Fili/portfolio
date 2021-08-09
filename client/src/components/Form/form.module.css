@@ -1,0 +1,18 @@
+.input{
+    border-radius: 30px;
+    margin: 0.5vh;
+    padding: 1vh 4vh;
+    height: 3.5vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+.submitBtn{
+    border-radius: 10px;
+    border: none;
+    margin: 1vh 0;
+    min-width: 50px;
+    height: 5vh;
+    width: 10vh;
+    outline: none;
+}
