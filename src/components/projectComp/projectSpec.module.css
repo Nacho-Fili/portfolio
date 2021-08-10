@@ -1,0 +1,32 @@
+
+.title{
+    font-size: 1.5rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.reposContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex-direction: column;
+}
+
+.text{
+    width: 50%;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.a{
+    text-decoration: none;
+}

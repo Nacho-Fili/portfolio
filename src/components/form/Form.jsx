@@ -41,14 +41,14 @@ export default function Form(){
     return (
         <form onSubmit={e => submit(e, {message, sender, emailSender})} style={style.form} action="">
             <input 
-                onchange={ ({ target }) => setSender(target.value)} 
+                onChange={ ({ target }) => setSender(target.value)} 
                 type='text' 
                 className={`section__form--input ${styles.input}`}
                 placeholder='Nombre...'
                 style={styleInput}/>
 
             <input 
-                onchange={ ({ target }) => setEmailSender(target.value)}
+                onChange={ ({ target }) => setEmailSender(target.value)}
                 type='email' 
                 className={`section__form--input ${styles.input}`}
                 placeholder='E-Mail...'
