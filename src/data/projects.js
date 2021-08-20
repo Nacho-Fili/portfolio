@@ -1,5 +1,47 @@
 const projects = [
     {
+        description: `Esta aplicación fue desarrollada como práctica personal. Es una aplicación
+        para administrar una determinada cantidad de recursos (motocicletas) que están disponibles en cantidades 
+        uniformemente en ciertos horarios durante el día. El login es simplemente con un username y
+        cada usuario puede solicitar solo un recurso por hora y debe guardarlos para que esta petición
+        sea persistida.`,
+
+        technologies: `Esta aplicacion fue desarrollada con NodeJS (express), PostgreSQL, ReactJS. El
+        deploy del frontend se hizo en Vercel y el deploy de la API en Heroku.`,
+        
+        site: 'https://motorcyclist-manager.vercel.app/',
+
+        repo:   [
+            `https://github.com/Nacho-Fili/motorcyclist-manager`,
+            `https://github.com/Nacho-Fili/motorcyclist-manager-api`
+        ],
+
+        img: 'https://www.dl.dropboxusercontent.com/s/v28g4u9bgfjz67d/MotorcyclistManager.png?dl=0',
+
+        enabled: true
+    },
+    
+    {
+        description: `Esta aplicación se trata de una lista de supermercado simple, en la que el usuario
+        debe agregar las cosas que desea comprar. Fue realizada con un enfoque sencillo pensando en que el
+        usuario pueda utilizarla con la menor cantidad de interacciones posibles. Es la resolución del desafío de Goncy Pozzo sobre Tradehelm
+        (https://github.com/goncy/tradehelm-challenge)`,
+
+        technologies: `Esta aplicacion fue desarrollada con NodeJS (express, socketio), PostgreSQL, ReactJS y Typescript. El
+        deploy se hizo enteramente en heroku.`,
+        
+        site: 'https://tradehelm-challenge.herokuapp.com/',
+
+        repo:   [
+            `https://github.com/Nacho-Fili/tradehelm-challenge`,
+        ],
+
+        img: 'https://www.dl.dropboxusercontent.com/s/ggaplu79knqt5au/tradehelm-challenge.png?dl=0',
+
+        enabled: true
+    },
+
+    {
         
         description: 'La idea de este proyecto es ayudar a mejorar el tiempo de reaccion de los ' + 
         'usuarios y a su vez proveerles una forma de medir esta mejora. Para ello, se implementaron 2 minijuegos. ' +
@@ -15,7 +57,7 @@ const projects = [
 
         img: 'https://www.dl.dropboxusercontent.com/s/jdrfciczrsyol8h/EntrenamientosDeReaccion.png?dl=0',
 
-        enabled: true
+        enabled: false
     },
 
     {
@@ -48,28 +90,6 @@ const projects = [
         img: 'https://www.dl.dropboxusercontent.com/s/obu5eeasvgbfz7w/LearningToReadSheetMusic.png?dl=0',
 
         enabled: false
-    },
-
-    {
-        description: `Esta aplicación fue desarrollada como práctica personal. Es una aplicación
-        para administrar una determinada cantidad de recursos (motocicletas) que están disponibles en cantidades 
-        uniformemente en ciertos horarios durante el día. El login es simplemente con un username y
-        cada usuario puede solicitar solo un recurso por hora y debe guardarlos para que esta petición
-        sea persistida.`,
-
-        technologies: `Esta aplicacion fue desarrollada con NodeJS (express), PostgreSQL, ReactJS. El
-        deploy del frontend se hizo en Vercel y el deploy de la API en Heroku.`,
-        
-        site: 'https://motorcyclist-manager.vercel.app/',
-
-        repo:   [
-            `https://github.com/Nacho-Fili/motorcyclist-manager`,
-            `https://github.com/Nacho-Fili/motorcyclist-manager-api`
-        ],
-
-        img: 'https://www.dl.dropboxusercontent.com/s/v28g4u9bgfjz67d/MotorcyclistManager.png?dl=0',
-
-        enabled: true
     }
 ]
 

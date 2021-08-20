@@ -18,7 +18,6 @@
     "express": "^4.17.1",
     "nodejs-nodemailer-outlook": "^1.2.4",
     "vercel": "^21.3.3"
-
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,7 +38,7 @@
       "not dead",
       "not op_mini all"
     ],
-  "development": [
+    "development": [
       ">0.3%",
       "not ie 11",
       "not dead",
